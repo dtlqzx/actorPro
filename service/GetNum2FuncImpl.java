@@ -13,12 +13,12 @@ public class GetNum2FuncImpl implements GetNum2Func{
 		system = ActorSystem.create("getnum2Service");
 		System.out.println("test");
 	}
-	
-	public void notifyMsg(String notification){
+
+	public void notifyMsg(Object notification){
 		if(a1==null){
 			a1 = system.actorOf(Props.create(Actor1.class),"getnum2");
-		}                        
+		}
 		a1.tell(notification, a1);
 	}
-	
+
 }
