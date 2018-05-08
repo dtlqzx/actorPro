@@ -1,0 +1,1 @@
+this project can read the functions and their parameter from a WSDL file
