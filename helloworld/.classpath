@@ -29,5 +29,18 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/Plugins/freemarker/apache-freemarker-2.3.27-incubating-bin/apache-freemarker-2.3.27-incubating-bin/freemarker.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/commons-httpclient-3.0.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/httpasyncclient-4.0-beta1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/httpclient-4.2.1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/httpcore-4.2.1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/httpcore-nio-4.2.1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/ldap0705.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/mysql-connector-java-5.1.41-bin.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files(x64)/Java/wk_64/PubSubSystem/lib/NewWSNClient-final.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
