@@ -53,23 +53,23 @@ public class Actor1 extends UntypedActor {
       <#if operation?index == 0>
       if(message instanceof ${operation.getOpName() + "_Msg"})
 			{
-				System.out.println("Actor1 received"+ ${operation.getOpName() + "_Msg"} +"message:"+message.toString());
+				System.out.println("Actor1 received"+ "${operation.getOpName() + "_Msg"}" +"message:"+message.toString());
 				PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
 			}
       else if (message instanceof ${operation.getOpName() + "Return_Msg"})
 			{
-        System.out.println("Actor1 received"+ ${operation.getOpName() + "Return_Msg"} +"message:"+message.toString());
+        System.out.println("Actor1 received"+ "${operation.getOpName() + "Return_Msg"}" +"message:"+message.toString());
     		PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
     	}
       <#else>
       else if(message instanceof ${operation.getOpName() + "_Msg"})
 			{
-				System.out.println("Actor1 received"+ ${operation.getOpName() + "_Msg"} +"message:"+message.toString());
+				System.out.println("Actor1 received"+ "${operation.getOpName() + "_Msg"}" +"message:"+message.toString());
 				PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
 			}
       else if (message instanceof ${operation.getOpName() + "Return_Msg"})
 			{
-        System.out.println("Actor1 received"+ ${operation.getOpName() + "Return_Msg"} +"message:"+message.toString());
+        System.out.println("Actor1 received"+ "${operation.getOpName() + "Return_Msg"}" +"message:"+message.toString());
     		PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
     	}
       </#if>
