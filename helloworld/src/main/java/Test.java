@@ -1,3 +1,4 @@
+import freemarker.log.Logger;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
@@ -5,6 +6,9 @@ import freemarker.template.TemplateException;
 
 import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
 import javax.wsdl.WSDLException;
+
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 
 import java.io.File;
 import java.io.FileWriter;

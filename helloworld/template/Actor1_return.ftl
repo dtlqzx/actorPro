@@ -55,8 +55,9 @@ public class Actor1 extends UntypedActor
     <#if operation?index == 0>
     if(message instanceof ${operation.getOpName() + "_Msg"})
 		{
-			System.out.println("Actor1 received"+ "${operation.getOpName() + "_Msg"}" +"message:"+message.toString());
-			PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
+      ${operation.getOpName() + "_Msg"} msg = (${operation.getOpName() + "_Msg"})message;
+
+      new ClassName().${operation.getOpName()}(<#list operation.getOpparams() as property>${"Msg_"+property.getName()} = ${property.getName()};</#list>);
 		}
     else if (message instanceof ${operation.getOpName() + "Return_Msg"})
 		{
