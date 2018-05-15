@@ -32,8 +32,35 @@ public class Actor1 extends UntypedActor
     </#list>
     public ${operation.getOpName() + "_Msg"}(<#list operation.getOpparams() as property><#if property.getType()== "string">String<#else>${property.getType()}</#if> ${property.getName() ! "null"}<#if property_has_next>, </#if></#list>)
     {
+<<<<<<< HEAD
       <#list operation.getOpparams() as property>
       ${"Msg_"+property.getName()} = ${property.getName()};
+=======
+      <#list serv.getOpes() as operation>
+      <#if operation?index == 0>
+      if(message instanceof ${operation.getOpName() + "_Msg"})
+			{
+				System.out.println("Actor1 received"+ ${operation.getOpName() + "_Msg"} +"message:"+message.toString());
+				PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
+			}
+      else if (message instanceof ${operation.getOpName() + "Return_Msg"})
+			{
+        System.out.println("Actor1 received"+ ${operation.getOpName() + "Return_Msg"} +"message:"+message.toString());
+    		PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
+    	}
+      <#else>
+      else if(message instanceof ${operation.getOpName() + "_Msg"})
+			{
+				System.out.println("Actor1 received"+ ${operation.getOpName() + "_Msg"} +"message:"+message.toString());
+				PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
+			}
+      else if (message instanceof ${operation.getOpName() + "Return_Msg"})
+			{
+        System.out.println("Actor1 received"+ ${operation.getOpName() + "Return_Msg"} +"message:"+message.toString());
+    		PubSubNode.getInstance().getSend("").reliableNotify("all:G", (String)message, false, "A");
+    	}
+      </#if>
+>>>>>>> parent of 058c78f... add a webservice by axis2
       </#list>
 
     }

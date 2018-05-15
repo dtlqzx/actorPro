@@ -30,7 +30,7 @@ public class Test {
 //		PropertyConfigurator.configure("log4j.properties");//加载.properties522文件
 //		Logger log=Logger.getLogger("org.zblog.test");
 		
-        String wsdluri = "F:/研究生/实验室/WSDL文件/SimpleService.xml";
+        String wsdluri = "F:/研究生/实验室/WSDL文件/MobileCodeWS.xml";
         List<String> operations = new ArrayList<>();
         WAWsdlUtil.getOperationList(wsdluri, operations);//getOperationList返回值是将操作名传入operations这个List
         List<Ope> operationList = new ArrayList<Ope>();
