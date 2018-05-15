@@ -30,20 +30,6 @@ import akka.actor.UntypedActor;
        <#list operation.getOpparams() as property>
        ${"Msg_"+property.getName()} = ${property.getName()};
        </#list>
-
-<<<<<<< HEAD
-  <#list serv.getOpes() as operation>
-  public static class ${operation.getOpName() + "_Msg"}
-  {
-    <#list operation.getOpparams() as property>
-    <#if property.getType()== "string">public final String<#else>public final ${property.getType()}</#if> ${"Msg_"+property.getName()};
-    </#list>
-    public ${operation.getOpName() + "_Msg"}(<#list operation.getOpparams() as property><#if property.getType()== "string">String<#else>${property.getType()}</#if> ${property.getName() ! "null"}<#if property_has_next>, </#if></#list>)
-    {
-      <#list operation.getOpparams() as property>
-      ${"Msg_"+property.getName()} = ${property.getName()};
-      </#list>
-=======
      }
    }
    private static class ${operation.getOpName() + "Return_Msg"}
@@ -55,7 +41,6 @@ import akka.actor.UntypedActor;
      }
    }
  </#list>
->>>>>>> parent of 058c78f... add a webservice by axis2
 
 
 public class Actor1 extends UntypedActor {

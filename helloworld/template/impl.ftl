@@ -21,9 +21,9 @@ public class GetNum2FuncImpl implements GetNum2Func{
 		switch(operationName)
 		{
       <#list serv.getOpes() as operation>
-      case "${operation.getName()}":
+      case "${operation.getOpName()}":
       {
-        message = new Actor1.${operation.getName()}_Msg();
+        message = new Actor1.${operation.getOpName()}_Msg(<#list operation.getOpparams() as property><#if property.getType()== "string">(String)<#else>(${property.getType()})</#if> notification[${property_index}]<#if property_has_next>,</#if></#list>);
         break;
       }
       </#list>

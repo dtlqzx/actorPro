@@ -35,7 +35,7 @@ public class Test {
         WAWsdlUtil.getOperationList(wsdluri, operations);//getOperationList返回值是将操作名传入operations这个List
         List<Ope> operationList = new ArrayList<Ope>();
         createDataModel(operationList,operations,wsdluri);
-        generateCodeFile(operationList,"./template","Actor1.ftl",new OutputStreamWriter(System.out));
+        generateCodeFile(operationList,"./template","impl.ftl",new OutputStreamWriter(System.out));
 
     }
 
