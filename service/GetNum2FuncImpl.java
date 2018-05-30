@@ -14,11 +14,12 @@ public class GetNum2FuncImpl implements GetNum2Func{
 		System.out.println("test");
 	}
 
-	public void notifyMsg(Object notification){
+	public Object notifyMsg(Object notification){
 		if(a1==null){
 			a1 = system.actorOf(Props.create(Actor1.class),"getnum2");
 		}
 		a1.tell(notification, a1);
+
 	}
 
 }
